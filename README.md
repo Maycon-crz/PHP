@@ -1,2 +1,2 @@
 # PHP
-Aprimorando conhecimentosem php
+Aprimorando conhecimentos em php
