@@ -1,6 +1,13 @@
 
 <?php
 
+    //Ternario
+    $primeiro = null;
+    $segundo = 'Segundo OK';
+    $terceiro = null;
+    $quarto = null;
+    $resultado = $primeiro ?? $segundo ?? $terceiro ?? $quarto ?? 'Não Preenchido';
+    echo $resultado;
 
     //Constant(Não varia contrario de varivel);
     define('PI', 3.14);
@@ -12,9 +19,9 @@
     );
     $nome = ''; $sobrenome = ''; $carro = 'Rádo';
 
-    //Modo novo        
+    //Modo novo (Ternario)
     $tipoDeCarro = ($carro == "Rápido") ? "Você tem um carro rápido" : "Você tem u carro lento";
-    echo $tipoDeCarro;
+    // echo $tipoDeCarro;
 
     $nome = $_POST['nome'] ?? "Não preenchido";
     $sobrenome = $_POST['sobrenome'] ?? "Não preenchido";
