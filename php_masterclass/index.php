@@ -1,13 +1,42 @@
 <?php
+
+    $_POST = array(
+        'nome' => 'Maycon',
+        'sobrenome' => null
+    );
+    $nome = ''; $sobrenome = '';
+    //Modo novo    
+    $nome = $_POST['nome'] ?? "Não preenchido";
+    $sobrenome = $_POST['sobrenome'] ?? "Não preenchido";
+    echo "{$nome}<br />";
+    echo "{$sobrenome}<br />";
+    //Modo Antigo         
+    if($_POST['nome'] <> null){
+        $nome = $_POST['nome'];
+    }else{$nome = "Não preenchido";}
+    if($_POST['sobrenome'] <> null){
+        $sobrenome = $_POST['sobrenome'];
+    }else{$sobrenome = "Não preenchido";}
+    // echo "Nome: {$nome} <br /> ";
+    // echo "Sobrenome: {$sobrenome}";
+
+    //TERNARIO
+    $cpf = '';
+    $cnpj = '22222222233333333';
+
+    $tipoDocumento = ($cpf != '') ? 'CPF' : 'CNPJ';
+        // echo $tipoDocumento;    
+    //---
+
+    //Condiçoes
     $ehFormado = true;
     $temCertificado = false;
-
     if($ehFormado === true){
-        echo "eh formado sim!";
+        // echo "eh formado sim!";
     } elseif($temCertificado === true){
-        echo "tem certificado sim!";
+        // echo "tem certificado sim!";
     } else{
-        echo "Vai estudar rapaz!";
+        // echo "Vai estudar rapaz!";
     }
 
     //Tipos de variaveis
