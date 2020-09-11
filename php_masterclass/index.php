@@ -1,15 +1,26 @@
+
 <?php
+
+
+    //Constant(Não varia contrario de varivel);
+    define('PI', 3.14);
+    // echo PI;
 
     $_POST = array(
         'nome' => 'Maycon',
         'sobrenome' => null
     );
-    $nome = ''; $sobrenome = '';
-    //Modo novo    
+    $nome = ''; $sobrenome = ''; $carro = 'Rádo';
+
+    //Modo novo        
+    $tipoDeCarro = ($carro == "Rápido") ? "Você tem um carro rápido" : "Você tem u carro lento";
+    echo $tipoDeCarro;
+
     $nome = $_POST['nome'] ?? "Não preenchido";
     $sobrenome = $_POST['sobrenome'] ?? "Não preenchido";
-    echo "{$nome}<br />";
-    echo "{$sobrenome}<br />";
+    // echo "{$nome}<br />";
+    // echo "{$sobrenome}<br />";
+
     //Modo Antigo         
     if($_POST['nome'] <> null){
         $nome = $_POST['nome'];
@@ -40,10 +51,12 @@
     }
 
     //Tipos de variaveis
-    $nome = "Maycon Nascimento de Oliveira";
-    $idade = 33; 
-    $altura = 1.70;
-    $formacoes = array("PHP", "Javascript");
+    $nome = "Maycon Nascimento de Oliveira"; //String
+    $intrutor = false;//Boolean
+    $idade = 33;//INT / INTEGER
+    $altura = 1.70;//FLOAT / Double
+    $formacoes = array("PHP", "Javascript");//Array
+    // $formacoes = ["PHP", "Javascript"];//Array outra forma
     $cliente = new \StdClass();
 
     // echo '$nome: ' . gettype($nome) . '<br />';
