@@ -1,6 +1,33 @@
 
-<?php
+<?php    
+    //substr - Pega texto a partir de uma possisao especifica
+    $mensagem = "Ola, meu nome é Maycon, tenho 21 anos de idade.";
+    $nome = substr($mensagem, 5);//a partir da 5ª posição, pega o restante
+    $nome = substr($mensagem, 0, 3);//a partir do inicio(posicao 0) pega apenas 3 caracteres
+    echo $nome;
+
+    //explode - Transformando string em array
+        $pizzas = "musarela calabresa frango";
+        $arraypizzas = explode(" ", $pizzas);// Separa a cadas espaço poderia ser ( | ) ( , ) etc...
+        // var_dump($arraypizzas);        
+    //-----------
     
+    //implode/join - Transformando array em string
+        $stringDeNovo = implode(' ', $arraypizzas);
+        // echo $stringDeNovo;
+    //-----------
+
+    //Data
+        //d = dia
+        //m = mês
+        //Y = Ano
+        // date_default_timezone_set("America/Sao_Paulo");
+        // echo "Hoje é ".date("d/m/Y")." - ";//BR
+        // echo "Para salvar no DB é usado: ";
+        // echo date("Y/m/d");
+        // echo " - Hora: ".date("H:i:s");
+        // echo " - Completo: ".date("d/m/Y h:i:s");
+    //-----
 
     //Function
 
@@ -10,11 +37,10 @@
         $resultado = array_filter($nomes, function($valor) use ($filtro){
             return ($valor === $filtro['nome1']) || ($valor === $filtro['nome2']);
         });
-        var_dump($resultado);
+        // var_dump($resultado);
 
         //string, int..(PHP avançado)
         // echo $resultado = mostraIdade(33);
-        
         function mostraIdade(int $idade) : int{// int obriga que o parametro passado e retornado seja numero inteiro
             return $idade+1;
         }
