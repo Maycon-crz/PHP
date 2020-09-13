@@ -1,5 +1,22 @@
 
 <?php
+    //for
+    for($i=0; $i<=10; $i++){
+        echo " - Numero: {$i}";
+    }
+
+    //Switch
+    $corFavorita = "azul";
+    switch($corFavorita){
+        case 'vermelho':
+            echo "Sua cor é Vermelho";
+        break;
+        case 'azul': 
+            // echo "Sua cor é Azul";
+        break;
+        default:
+            echo "Não selecionou nenhumma cor!";
+    }
 
     //Ternario
     $primeiro = null;
@@ -7,7 +24,7 @@
     $terceiro = null;
     $quarto = null;
     $resultado = $primeiro ?? $segundo ?? $terceiro ?? $quarto ?? 'Não Preenchido';
-    echo $resultado;
+    // echo $resultado;
 
     //Constant(Não varia contrario de varivel);
     define('PI', 3.14);
