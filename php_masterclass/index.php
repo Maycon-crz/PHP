@@ -1,10 +1,29 @@
 
 <?php    
+    //json objeto para string
+        $idades = [
+            'julio'=>'julilo é de 86',
+            'roberto'=>'roberto é de 88'
+        ];
+        $json = json_encode($idades, JSON_UNESCAPED_UNICODE);//Com ascento certo
+        // echo $json;
+    //-----
+    //json string para objeto
+        $json = '{"julio":"julilo é de 86","roberto":"roberto é de 88"}';
+        $objeto = json_decode($json);
+        // var_dump($objeto->julio);
+    //-----
+    //json string para array
+        $array = json_decode($json, true);
+        var_dump($array['julio']);
+    //-----
+
     //substr - Pega texto a partir de uma possisao especifica
-    $mensagem = "Ola, meu nome é Maycon, tenho 21 anos de idade.";
-    $nome = substr($mensagem, 5);//a partir da 5ª posição, pega o restante
-    $nome = substr($mensagem, 0, 3);//a partir do inicio(posicao 0) pega apenas 3 caracteres
-    echo $nome;
+        $mensagem = "Ola, meu nome é Maycon, tenho 21 anos de idade.";
+        $nome = substr($mensagem, 5);//a partir da 5ª posição, pega o restante
+        $nome = substr($mensagem, 0, 3);//a partir do inicio(posicao 0) pega apenas 3 caracteres
+        // echo $nome;
+    //-----------
 
     //explode - Transformando string em array
         $pizzas = "musarela calabresa frango";
