@@ -1,5 +1,18 @@
 
-<?php    
+<?php   
+    //Numeros aleatórios(Dapara usar em sorteio)
+        echo( rand()." - ");//Aleatório
+        echo(rand()." - ");//Aleatório
+        echo (rand(0, 10));//Aleatório de 0 a 10
+    //-----
+    //Exportando
+        // $texto = file_put_contents('teste.txt', 'Olá meu camarada!');
+    //-----
+    //Importando
+        $texto = file_get_contents('teste.txt');
+        // echo $texto;
+    //-----
+
     //json objeto para string
         $idades = [
             'julio'=>'julilo é de 86',
@@ -15,7 +28,7 @@
     //-----
     //json string para array
         $array = json_decode($json, true);
-        var_dump($array['julio']);
+        // var_dump($array['julio']);
     //-----
 
     //substr - Pega texto a partir de uma possisao especifica
