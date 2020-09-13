@@ -1,18 +1,71 @@
 
 <?php
-    //Do while
-    $numerando = 1;
-    do{
-        echo "Numero atual é: {$numerando} - ";
-        $numerando++;
-    } while($numerando<=5);
+    
 
+    //Function
+
+        //Filtrando com funcao anonima
+        $filtro = ['nome1' => 'Maycon', 'nome2' => 'Daniel'];
+        $nomes = ['Maycon', 'Daniel', 'Richard', 'Ricardo', 'Luiz'];
+        $resultado = array_filter($nomes, function($valor) use ($filtro){
+            return ($valor === $filtro['nome1']) || ($valor === $filtro['nome2']);
+        });
+        var_dump($resultado);
+
+        //string, int..(PHP avançado)
+        // echo $resultado = mostraIdade(33);
+        
+        function mostraIdade(int $idade) : int{// int obriga que o parametro passado e retornado seja numero inteiro
+            return $idade+1;
+        }
+
+        //dump and file
+        function dd($variavel){
+            // echo "<pre>";
+            print_r($variavel[0]);
+            // echo "</pre>";
+            die();
+        }
+        $nomes = ['Maycon', 'Ricardo'];
+        // dd($nomes);
+
+    //--------
+
+    //Foreach
+
+        // $nomes = ['Maycon', 'Luiz', 'Richard', 'Ricardo'];
+        // $resultado = [];
+        // foreach($nomes as $key=>$value){
+        //     if( !($key % 2) ){//Se não for divisivel por 2(se for impar)
+        //         continue;
+        //     }
+        //     array_push($resultado, $value);//Atribui a array resultado o valor
+        // }
+        // var_dump($resultado);
+
+        // $cores = ['Amarelo', 'Verde', 'Azul', 'Vermelho'];
+        // foreach($cores as $cor){
+        //     echo " - A cor é: {$cor}";
+        // }
+
+    //------
+
+    //Do while
+
+        // $numerando = 1;
+        // do{
+        //     echo "Numero atual é: {$numerando} - ";
+        //     $numerando++;
+        // } while($numerando<=5);
+
+    //------
     //While
-    // $numero = 1;
-    // while($numero <=5 ){
-    //     echo "Numero atual: {$numero} - ";
-    //     $numero++;
-    // }
+        // $numero = 1;
+        // while($numero <=5 ){
+        //     echo "Numero atual: {$numero} - ";
+        //     $numero++;
+        // }
+    //------
 
     //for
     // for($i=0; $i<=10; $i++){
