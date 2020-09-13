@@ -1,9 +1,23 @@
 
 <?php
+    //Do while
+    $numerando = 1;
+    do{
+        echo "Numero atual é: {$numerando} - ";
+        $numerando++;
+    } while($numerando<=5);
+
+    //While
+    // $numero = 1;
+    // while($numero <=5 ){
+    //     echo "Numero atual: {$numero} - ";
+    //     $numero++;
+    // }
+
     //for
-    for($i=0; $i<=10; $i++){
-        echo " - Numero: {$i}";
-    }
+    // for($i=0; $i<=10; $i++){
+    //     echo " - Numero: {$i}";
+    // }
 
     //Switch
     $corFavorita = "azul";
