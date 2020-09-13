@@ -1,9 +1,22 @@
 
-<?php   
+<?php 
+    //strlen - conta a quantidade de caracteres
+        $nome = "Maycon Nascimento de Oliveira";
+        // echo strlen($nome);
+    //----
+    //str_replace - Modifica a string
+        $ascinatura = str_replace('Nascimento de Oliveira', 'N. de Oliveira', $nome);
+        echo $ascinatura;
+    //----
+    //count - conta quantos elementos tem
+        $carros =  ["fusca", "opala", "maverick"];
+        // echo count($carros);
+    //----
+
     //Numeros aleatórios(Dapara usar em sorteio)
-        echo( rand()." - ");//Aleatório
-        echo(rand()." - ");//Aleatório
-        echo (rand(0, 10));//Aleatório de 0 a 10
+        // echo( rand()." - ");//Aleatório
+        // echo(rand()." - ");//Aleatório
+        // echo (rand(0, 10));//Aleatório de 0 a 10
     //-----
     //Exportando
         // $texto = file_put_contents('teste.txt', 'Olá meu camarada!');
