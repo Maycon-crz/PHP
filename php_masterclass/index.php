@@ -1,10 +1,22 @@
 
 <?php 
+    //Globais
+    $nome = $_GET['nome'] ?? "Não informado!";
+    echo $nome;
+    //------
+    //Enviando E-mail
+        //Não recomendado e tem que configurar o php
+            $mensagem = "Olá Meu nome é Maycon";
+            $mensagem = wordwrap($mensagem, 25);
+            // mail("emailQueVaiReceber@gmail.com", "Assunto", $mensagem);
+        //------
+    //------
+
     //Encerrando(parando) a aplicação 
         $nome = "Maycon Nascimento de Oliveira";
-        die("Encerrando a aplicação!");//A partir daqui não executa mais nada e escreve a menssgem setada;
-        exit("Encerrando a aplicação!");//A partir daqui não executa mais nada e escreve a menssgem setada;
-        echo $nome;
+        // die("Encerrando a aplicação!");//A partir daqui não executa mais nada e escreve a menssgem setada;
+        // exit("Encerrando a aplicação!");//A partir daqui não executa mais nada e escreve a menssgem setada;
+        // echo $nome;
     //-------
     //Exemplos de de header()
         // header('Expires: Mon, 26 Nov 2020 18:00:00 GMT');
