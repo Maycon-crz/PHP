@@ -1,12 +1,36 @@
 
 <?php 
+    //Encerrando(parando) a aplicação 
+        $nome = "Maycon Nascimento de Oliveira";
+        die("Encerrando a aplicação!");//A partir daqui não executa mais nada e escreve a menssgem setada;
+        exit("Encerrando a aplicação!");//A partir daqui não executa mais nada e escreve a menssgem setada;
+        echo $nome;
+    //-------
+    //Exemplos de de header()
+        // header('Expires: Mon, 26 Nov 2020 18:00:00 GMT');
+        // header('Cache-Control: no-cache');
+        // header('Pragma: no-cache');
+
+        // header('Location: index.php');
+
+    //-------
+    //criptografia fraca
+        $md5 = md5('maycon');
+        $sha1 = sha1('12345');
+        // echo "Criptografado em md5: ".$md5." | ";    
+        // echo "Criptografado em sha1: ".$sha1;        
+        $nome = "Maycon";
+        $nomeCodificado = base64_encode($nome);
+        $nomeDecodificado = base64_decode($nomeCodificado);
+        // echo "Nome codificado: ".$nomeCodificado." | Nome Decodificado: ".$nomeDecodificado;
+    //-------
     //strlen - conta a quantidade de caracteres
         $nome = "Maycon Nascimento de Oliveira";
         // echo strlen($nome);
     //----
     //str_replace - Modifica a string
         $ascinatura = str_replace('Nascimento de Oliveira', 'N. de Oliveira', $nome);
-        echo $ascinatura;
+        // echo $ascinatura;
     //----
     //count - conta quantos elementos tem
         $carros =  ["fusca", "opala", "maverick"];
