@@ -1,7 +1,31 @@
-
+    
 <?php 
+    //try{}catch{}
+        //Tratando Erro para aparecer no try catch 
+            error_reporting(-1);
+            set_error_handler(function($code, $message){
+                throw new ErrorException($message, $code);
+            });
+        //-------
+
+        $numerador = 20;
+        $denominador = 0;
+
+        try{
+            echo $numerador / $denominador;
+        }catch(\Exception $error){
+            echo "{$error->getMessage()}"; 
+        }
+    //------
     //Globais/
-        // $_POST[];
+        //SESSION  //cor.php
+            
+            session_start();
+            $_SESSION['cor_favorita'] = 'azul';
+            // echo 'Cor favorita setada!';
+
+        //-------
+        // $_POST[];  //servidor.php
             ?>
             <!DOCTYPE html>
             <html lang='pt-br'>
@@ -22,7 +46,7 @@
         // $_GET[''];
             $nome = $_GET['nome'] ?? "Não informado!";
             $sobrenome = $_GET['sobrenome'] ?? "Não informado";
-        echo $nome."<br>".$sobrenome;
+            // echo $nome."<br>".$sobrenome;
         //------    
     //------
     //Enviando E-mail
