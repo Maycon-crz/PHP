@@ -1,5 +1,23 @@
     
 <?php 
+    //Aproveitando Incluido outro arquivo PHP
+        //include
+            //Adiciona o arquivo especificado e caso não encontrar retorna um
+            //Erro no tipo warning(Deixa a aplicação continuar sendo executada) 
+            //com msg de arquivo não encontrado
+        //-----
+        //include_once
+            //Caso ja tenha sido adicionado o aquivo, não inclui novamente
+        //-----
+        //require(recomendado)
+            //Mesma coisa que o include porem se não existir o aquivo a aplicação/escript
+            //Para de executar e retorna uma fatal error 
+        //-----
+        //require_once(recomendado)
+            //Caso ja tenha sido adicionado o aquivo, não inclui novamente
+        //-----
+    //-----
+
     //try{}catch{}
         //Tratando Erro para aparecer no try catch 
             error_reporting(-1);
@@ -12,9 +30,11 @@
         $denominador = 0;
 
         try{
-            echo $numerador / $denominador;
+            // echo $numerador / $denominador;
         }catch(\Exception $error){
-            echo "{$error->getMessage()}"; 
+            // echo "{$error->getMessage()}"; 
+        } finally {//Independente do que acontecer vai ser executado isto
+            // echo "<br />Fim da execução...<br />";
         }
     //------
     //Globais/
