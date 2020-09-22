@@ -1,8 +1,15 @@
 
 <?php 
-    //Globais
-    $nome = $_GET['nome'] ?? "Não informado!";
-    echo $nome;
+    //Globais/
+        // $_GET[''];
+            $nome = $_GET['nome'] ?? "Não informado!";
+            $sobrenome = $_GET['sobrenome'] ?? "Não informado";
+        // echo $nome."<br>".$sobrenome;
+        //------
+        // $_POST[];
+        
+        //------
+
     //------
     //Enviando E-mail
         //Não recomendado e tem que configurar o php
