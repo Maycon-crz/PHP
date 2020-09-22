@@ -1,15 +1,29 @@
 
 <?php 
     //Globais/
+        // $_POST[];
+            ?>
+            <!DOCTYPE html>
+            <html lang='pt-br'>
+                <head>
+                    <meta charset='UTF-8'>
+                    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                    <title>Formulário</title>
+                </head>
+                <body>
+                    <form action='servidor.php' method='POST'>
+                        <input type='text' name='nome' placeholder='Informe o seu nome...'/>
+                        <button type='submit'>Enviar</button>
+                    </form>
+                </body>
+            </html>
+<?php 
+        //------
         // $_GET[''];
             $nome = $_GET['nome'] ?? "Não informado!";
             $sobrenome = $_GET['sobrenome'] ?? "Não informado";
-        // echo $nome."<br>".$sobrenome;
-        //------
-        // $_POST[];
-        
-        //------
-
+        echo $nome."<br>".$sobrenome;
+        //------    
     //------
     //Enviando E-mail
         //Não recomendado e tem que configurar o php
