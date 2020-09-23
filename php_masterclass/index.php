@@ -1,6 +1,12 @@
     
-<?php 
-    //Aproveitando Incluido outro arquivo PHP
+<?php
+
+    //Aproveitando/Incluido outro arquivo PHP
+        //----
+            require_once('confg.php');
+            $connection = getConnection();
+            echo $connection;
+        //----
         //include
             //Adiciona o arquivo especificado e caso não encontrar retorna um
             //Erro no tipo warning(Deixa a aplicação continuar sendo executada) 
@@ -47,7 +53,7 @@
         //-------
         // $_POST[];  //servidor.php
             ?>
-            <!DOCTYPE html>
+          <!--   <!DOCTYPE html>
             <html lang='pt-br'>
                 <head>
                     <meta charset='UTF-8'>
@@ -60,7 +66,7 @@
                         <button type='submit'>Enviar</button>
                     </form>
                 </body>
-            </html>
+            </html> -->
 <?php 
         //------
         // $_GET[''];
