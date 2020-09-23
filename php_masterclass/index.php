@@ -29,9 +29,9 @@
         $numerador = 20;
         $denominador = 0;
 
-        try{
+        try{//Tenta fazer issso
             // echo $numerador / $denominador;
-        }catch(\Exception $error){
+        }catch(\Exception $error){//Se der erro Executa isso
             // echo "{$error->getMessage()}"; 
         } finally {//Independente do que acontecer vai ser executado isto
             // echo "<br />Fim da execução...<br />";
