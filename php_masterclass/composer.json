@@ -1,0 +1,12 @@
+{
+    "name": "testemaycon/phpmasterclass",
+    "authors": [
+        {
+            "name": "Maycon Nascimento de Oliveira",
+            "email": "mayconnascimentodeoliveira23@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    }
+}

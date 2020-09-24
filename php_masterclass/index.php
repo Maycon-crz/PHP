@@ -1,5 +1,6 @@
     
 <?php
+    //Intalei os arquivos composer e phpmailer
 
     //Aproveitando/Incluido outro arquivo PHP
         //----
