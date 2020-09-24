@@ -1,4 +1,29 @@
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendMail</title>
+</head>
+<body>
+    <form action='sendmail.php' method='post'>
+        <label form='nome'>Nome Completo</label>
+        <input type='text' name='nome' placeholder='Informe o seu sobrenome...' />
+        <br><br>
+        <label for='pais'>País</label>
+        <select>
+            <option value=''>Selecione um país</option>
+            <option value='brasil'>Brasil</option>
+            <option value='usa'>Estados Unidos</option>
+        </select>        
+        <br><br>
+        <label for='mensagem'>Mensagem</label>
+        <textarea name='mensagem' cols='30' rows='10' placeholder='Insira sua mensagem aqui...'></textarea>
+        <br><br>
+        <input type='submit' value='Enviar' />
+    </form>
+</body>
+</html>
 <?php
     //Intalei os arquivos composer e phpmailer
 
@@ -6,7 +31,7 @@
         //----
             require_once('confg.php');
             $connection = getConnection();
-            echo $connection;
+            // echo $connection;
         //----
         //include
             //Adiciona o arquivo especificado e caso não encontrar retorna um
