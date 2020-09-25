@@ -1,5 +1,7 @@
 <?php
 
+	//Para funcionar Tem que completar os dados
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;

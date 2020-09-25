@@ -1,6 +1,24 @@
 <?php
 
+    //Upload
+?> 
+        <!DOCTYPE html>
+        <html lang="pt-br">
+        <head>
+            <title>Upload</title>
+        </head>
+        <body>
+            <form action="upload.php" method="POST" enctype="multipart/form-data">
+                Selecione uma imagem
+                <input type="file" name="fileToUpload">
+                <br>
+                <input type="submit" name="submit" value="Enviar Imagem">
+            </form>
+        </body>
+        </html>
+<?php
     //----------
+
     // Enviando mensagem para email PHPMailer
 ?>
         <!-- <!DOCTYPE html>
