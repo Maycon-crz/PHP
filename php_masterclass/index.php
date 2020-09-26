@@ -1,8 +1,14 @@
 <?php
-
+    //PDO
+        // Verifica se o PDO está habilitado
+            if(!defined('PDO::ATTR_DRIVER_NAME')){
+                echo "PDO não esta disposponivel. Ative no php.ini";
+            }
+        //---------
+    //---------
     //Upload
 ?> 
-        <!DOCTYPE html>
+        <!-- <!DOCTYPE html>
         <html lang="pt-br">
         <head>
             <title>Upload</title>
@@ -15,7 +21,7 @@
                 <input type="submit" name="submit" value="Enviar Imagem">
             </form>
         </body>
-        </html>
+        </html> -->
 <?php
     //----------
 

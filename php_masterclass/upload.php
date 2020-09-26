@@ -1,6 +1,6 @@
 <?php
 
-	$target_dir = "upload/";
+	$target_dir = "uploads/";
 	//basename()//Nome base Pega o caminho atual do arquivo
 	$target_file = $target_dir.basename($_FILES['fileToUpload']['name']);//Concatenado com o nome do campo
 	$uploadOk = 1;
@@ -13,7 +13,7 @@
 			$check = getimagesize($_FILES['fileToUpload']['tmp_name']);//
 
 			if($check !== false){//Diferente mesmo até o tipo
-				echo "O arquivo é uma imagem - ".$check['mine'].". <br />";
+				echo "O arquivo é uma imagem. <br />";
 			}else{
 				echo "O arquivo não é uma imagem";
 				$uploadOk = 0;
