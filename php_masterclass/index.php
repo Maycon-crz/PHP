@@ -1,15 +1,25 @@
 <?php
     //PDO
+        require_once('confg.php');            
+        //filtro diferenciado
+        $nome = "Maycon";
+        $query = $pdo->prepare("SELECT * FROM usuarios WHERE nome = :nome");
+        if($query->execute([':nome' => $nome])){
+            $resultado = $query->fetch();
+            var_dump($resultado);
+        }else{
+            echo "Erro na query!";
+        }
+        //-----
         // Verifica se o PDO está habilitado
             if(!defined('PDO::ATTR_DRIVER_NAME')){
                 echo "PDO não esta disposponivel. Ative no php.ini";
-            }
-            require_once('confg.php');            
+            }            
             $usuarios = $pdo->query('SELECT * FROM usuarios')->fetchAll();
 
-            echo '<pre>';
-            echo $usuarios[0]['nome'];
-            echo '</pre>';
+            // echo '<pre>';
+            // echo $usuarios[0]['nome'];
+            // echo '</pre>';
         //---------
     //---------
     //Upload
