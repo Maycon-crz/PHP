@@ -4,7 +4,12 @@
             if(!defined('PDO::ATTR_DRIVER_NAME')){
                 echo "PDO não esta disposponivel. Ative no php.ini";
             }
-            require_once('confg.php');
+            require_once('confg.php');            
+            $usuarios = $pdo->query('SELECT * FROM usuarios')->fetchAll();
+
+            echo '<pre>';
+            echo $usuarios[0]['nome'];
+            echo '</pre>';
         //---------
     //---------
     //Upload
