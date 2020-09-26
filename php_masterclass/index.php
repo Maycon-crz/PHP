@@ -4,6 +4,7 @@
             if(!defined('PDO::ATTR_DRIVER_NAME')){
                 echo "PDO não esta disposponivel. Ative no php.ini";
             }
+            require_once('confg.php');
         //---------
     //---------
     //Upload
@@ -59,8 +60,8 @@
 
     //Aproveitando/Incluido outro arquivo PHP
         //----
-            require_once('confg.php');
-            $connection = getConnection();
+            // require_once('confg.php');
+            // $connection = getConnection();
             // echo $connection;
         //----
         //include
